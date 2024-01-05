@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0.7px;
+}
+
+header{
+    z-index: 100;
+} 
+
+.header-top {
+    top: 18px;
+    background-color:  #000000;
+    backdrop-filter: blur(80px); 
+    width: 280px;
+    border-radius: 40px;
+    padding: 14px;
+    height:40px;/* 
+    background: linear-gradient(to bottom right, rgb(34 197 94),#151515, #151515); */
+    background-color: #020202;
+}
+
+.header-top nav{
+    width: 100%;
+}
+
+body{
+    background-color: #020202;
+}
+
+
+.paiImage{
+    background-image: url(./assets/capa-edit.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.image-tec{
+    background-image: url(./assets/about/about-tec.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+}
+
+/* Estilos para telefones (largura de tela até 767 pixels) */
+@media only screen and (max-width: 767px) {
+    .image-tec{
+        width: 100%;
+    }
+    header nav{
+        background-color: rgb(34 197 94);
+        border-radius: 30px 0 0 30px;
+        padding: 14px 8px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 180px;
+        width: 50px;
+    }
+    header nav ul{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+    header li {
+        font-size: small;
+    }
+    .header-top {
+        top: 0;
+        background-color:  rgb(34 197 94);
+        backdrop-filter: blur(80px); 
+        width: 280px;
+        border-radius: 0 0 30px 30px;
+        padding: 14px;
+        height: 50px;
+    }
+    .header-top nav{
+        height: 40px;
+        background: transparent;
+    }
+    .header-top nav ul {
+        flex-direction: row;
+    }
+    header, section {
+        width: 100%;
+    }
+    .responsive-image{
+        height: 300px;
+    }
+    
+    .image-tec{
+        height: 300px;
+    }
+}
+
+/* Estilos para tablets (largura de tela de 768 a 991 pixels) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .SectionSkill {
+        /* Seus estilos específicos para tablets aqui */
+    }
+    
+    .image-tec{
+        height: 450px;
+    }
+}
+
+/* Estilos para notebooks (largura de tela de 992 a 1199 pixels) */
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+    .responsive-contact {
+    }
+}
+
+/* Estilos para monitores (largura de tela 1200 pixels ou mais) */
+@media only screen and (min-width: 1200px) {
+        
+    .paiImage{
+        background-image: url(./assets/capa-edit.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.anime{
+    animation: move-up6 1s ease-in infinite alternate-reverse;
+}
+
+@keyframes move-up6 {
+    to {
+        transform: translateY(-18px);
+    }
+}
+
