@@ -18,7 +18,7 @@ const SectionInit = ({scrollToTop, isVisible}) => {
             }
             < Cabecalho />
             <div className="h-full w-full relative flex justify-center items-center">
-                <article className="flex justify-center items-center text-white container h-screen md:h-[800px] lg:h-full xl:h-full p-4 mt-0 md:mt-36 lg:mt-40 xl:mt-40 mb-20 bg-[#111] h-[500px]">
+                <article className="flex justify-center items-center text-white w-11/12 h-screen md:h-[800px] lg:h-full xl:h-full p-4 mt-0 md:mt-36 lg:mt-40 xl:mt-40 mb-20 bg-[#111] h-[500px]">
                     <div className="mx-auto md:mx-0 lg:mx-0 xl:mx-0 w-11/12 md:w-full lg:w-7/12 xl:w-7/12
                     flex flex-col justify-center items-center text-center">
                         <img src={Layout} 

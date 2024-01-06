@@ -6,7 +6,7 @@ const SectionAbout = () => {
     return(
         <main className="
         flex flex-col md:flex-col lg:flex-row xl:flex-row justify-between 
-        md:items-center container mb-20 mx-auto bg-[#111] min-h-[600px]">
+        md:items-center w-11/12 mb-20 mx-auto bg-[#111] min-h-[600px]">
             <div className=" w-full md:w-full lg:w-5/12 xl:5/12 " >
                 <div className="image-tec"></div>
             </div>

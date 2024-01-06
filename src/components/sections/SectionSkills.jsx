@@ -6,7 +6,7 @@ import { SiJest, SiMongodb, SiStyledcomponents  } from "react-icons/si"
 import Skills from "./skills/Skills";
 const MySkills = () => {
     return(
-        <section className=" container bg-[#111] mx-auto">
+        <section className=" w-11/12 bg-[#111] mx-auto">
             <h2 className="container text-3xl text-white h-16 flex items-center justify-center"> 
                 Minhas habilidades 
             </h2>
