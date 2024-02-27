@@ -62,7 +62,7 @@ const Project = () => {
             technologies: [ FaReact, BiLogoCss3],
             mobileImg: [mobile5],
             link: {
-                project: 'https://api-fipe-project.vercel.app/', 
+                project: 'https://api-fipe-code.vercel.app/', 
                 github: 'https://github.com/jotaMch/Api_fipe_project'
             },
         },

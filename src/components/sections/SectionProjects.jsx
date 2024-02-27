@@ -3,7 +3,7 @@ import Cabecalho from "../header/Cabecalho";
 import { GoCheckCircle } from "react-icons/go";
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi';
 
-const SectionProjects = ({ projects, newProject, scrollToTop }) => {
+const SectionProjects = ({ projects, newProject }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     const handleScroll = () => {
@@ -15,6 +15,13 @@ const SectionProjects = ({ projects, newProject, scrollToTop }) => {
         setIsVisible(false);
         }
     };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };    
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -31,13 +38,13 @@ const SectionProjects = ({ projects, newProject, scrollToTop }) => {
             <button
             onClick={scrollToTop}
             className="z-100 fixed bottom-8 right-4 bg-transparent text-green-400 
-            py-2 px-4 rounded-full border border-green-400"
+            py-2 px-3 rounded-full border border-green-400"
             >
                 <HiOutlineArrowNarrowUp className="w-6 h-6" />                                                                                  
             </button>
             }
             < Cabecalho />
-            <section className="flex flex-col justify-center md:pt-36 lg:pt-40 pt-0 xl:pt-40 w-11/12 mx-auto">
+            <section className="flex flex-col justify-center md:pt-36 lg:pt-40 pt-0 xl:pt-40 container mx-auto">
                 <div className="flex flex-col justify-center bg-[#111] p-4">
                     <h2 className="text-3xl text-white text-center mb-6" >Projeto mais recente</h2>
                     <div className="
@@ -48,25 +55,10 @@ const SectionProjects = ({ projects, newProject, scrollToTop }) => {
                         {newProject.map((newPro) => (
                         <article key={newPro.name} 
                         className="bg-green-500 w-11/12 md:w-full lg:w-5/12 xl:w-5/12 p-5 h-72 shadow-lg 
-                        mt-10 md:mt-10 lg:mt-0 xl:mt-0 flex justify-center items-center rounded-md relative">
+                        mt-10 md:mt-10 lg:mt-0 xl:mt-0 flex justify-center items-center rounded-md  ">
                             
                             <div className="">
-                                <div className="absolute bottom-2 flex gap-2 mb-4">
-                                    <a 
-                                    href={newPro.link.front}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm">
-                                    Github front
-                                    </a>
-                                    <a 
-                                    href={newPro.link.back}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm">
-                                    Github back
-                                    </a>
-                                </div>
+                                
                                 <p className="text-lg font-bold font-sans">{newPro.name}</p>
                                 <div className="py-3 px-1 flex">
                                     {newPro.technologies.map((TechIcon, index) => (
@@ -75,6 +67,26 @@ const SectionProjects = ({ projects, newProject, scrollToTop }) => {
                                 </div>
                                 <div className="text-sm py-2 ">
                                     {newPro.about}
+                                </div>
+                                <div className="  bottom-2 flex gap-2">
+                                    <a 
+                                    href={newPro.link.front}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm
+                                    hover:bg-[#111] hover:shadow hover:shadow-green-700 transition-all duration-300 ease-in-out"
+                                    >
+                                    Github front
+                                    </a>
+                                    <a 
+                                    href={newPro.link.back}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm
+                                    hover:bg-[#111] hover:shadow hover:shadow-green-700 transition-all duration-300 ease-in-out"
+                                    >
+                                    Github back
+                                    </a>
                                 </div>
                             </div>
                         </article>
@@ -153,7 +165,8 @@ const SectionProjects = ({ projects, newProject, scrollToTop }) => {
                                         href={project.link.project}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm"
+                                        className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm
+                                        hover:bg-[#111] hover:shadow hover:shadow-green-700 transition-all duration-300 ease-in-out"
                                     >
                                         Projeto
                                     </a>
@@ -161,7 +174,8 @@ const SectionProjects = ({ projects, newProject, scrollToTop }) => {
                                         href={project.link.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm"
+                                        className="bg-green-100 text-green-700 rounded-xl px-3 py-1 text-sm
+                                        hover:bg-[#111] hover:shadow hover:shadow-green-700 transition-all duration-300 ease-in-out"
                                     >
                                         GitHub
                                     </a>

@@ -74,7 +74,7 @@ const Contact = () => {
                             <p className="
                             text-3xl md:text-5xl lg:text-5xl xl:text-5xl text-start
                             mt-8 md:mt-2 lg:mt-0 xl:mt-0 w-3/6 ">
-                                Entar em contato pelo <br/>
+                                Entrar em contato pelo <br/>
                                 <a 
                                 className="text-green-400 
                                 text-5xl md:text-6xl lg:text-8xl xl:text-8xl underline" 
